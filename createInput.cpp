@@ -147,12 +147,11 @@ void listDir(char *path)
                  		if(strcmp(ent->d_name,".")==0 || strcmp(ent->d_name,"..")==0)
                                 continue;
                         sprintf(childpath,"%s/%s",path,ent->d_name);
-                        cout <<childpath<<endl;
+                        cout <<"createInput ------ childpath:"<<childpath<<endl;
                         listDir(childpath);
                 }
 				else
 				{
-					cout<<ent->d_name<<endl;
                                         if(strcmp(ent->d_name,"stdin_format.txt")==0)
                                         {
                                                 char formatpath[512];
